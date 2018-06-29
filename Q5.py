@@ -1,0 +1,15 @@
+import random
+a =open("Numbers.txt","w")
+for i in range(10):
+    line =str(random.randint(1,9))
+    a.write(line)
+    print(line)
+a.close()
+f2=open("Numbers.txt","r")
+line=f2.read()
+data=sorted(line)
+print(data)
+f3=open("SortData.txt","w")
+f3.write(str(data))
+f3.close()
+f2.close()
